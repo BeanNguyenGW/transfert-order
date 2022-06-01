@@ -1,0 +1,20 @@
+app:
+  message:  Gateway starter
+spring:
+  rabbitmq:
+    host: armadillo.rmq.cloudamqp.com/bkkxlwcd
+    password: v5jPnr58WSQ6GVN-xO8p4I5JFhlRJDKq
+    port: 5671
+    username: bkkxlwcd
+#    exchange: user.exchange
+    queue: gateway.transfer_order.queue
+  redis:
+    host: localhost
+    port: 6379
+    redisson:
+      classpath: redisson.yaml
+
+server:
+  port: 9092
+  servlet:
+    context-path: /gateway

@@ -1,0 +1,16 @@
+app:
+  name: master-transfer-order
+  message: Master transfer order.
+spring:
+  rabbitmq:
+    host: armadillo.rmq.cloudamqp.com/bkkxlwcd
+    password: v5jPnr58WSQ6GVN-xO8p4I5JFhlRJDKq
+    port: 5671
+    username: bkkxlwcd
+    queue: master.transfer_order.queue
+server:
+  port: 9091
+  servlet:
+    context-path: /master
+gateway-api:
+  transfertOrderUrl: http://localhost:9092/gateway/api/transferOrder/receive
